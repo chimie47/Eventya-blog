@@ -1,0 +1,45 @@
+<%= form_with model: @article do |f| %>
+
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+    
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+
+    </div>
+  <% end %>
+<div class="d-grid gap-3 mt-5">
+
+  <div class="p-2 bg-light border form-control">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="p-2 bg-light border form-control">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="p-2 bg-light border form-control">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+</div>
+
+  <div class="form-control">
+      <%= f.label "Article Photo" %>
+      <%= f.file_field :avatar %><br>
+  </div>
+
+  <%= f.submit %>
+
+  <% end %>

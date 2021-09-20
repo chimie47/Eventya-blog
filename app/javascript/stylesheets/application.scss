@@ -1,0 +1,68 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import 'toastr';
+
+
+$white: white;
+$black: black;
+
+.navbar {
+        margin-bottom: 0;
+        background: $black;
+}
+body {
+    background-color: #E6E6E6;
+    font-size: 1em;
+    font-family: 'Merriweather', sans-serif;
+}
+h1,
+h2 {
+        font-weight: bold;
+}
+p {
+    font-size: 16px;
+    color: $black!important;
+}
+a:visited {
+        color: $black;
+}
+.jumbotron {
+        background: #0048CD;
+        text-align: center;
+        p {
+                color: $black;
+                font-size: 26px;
+        }
+}
+
+.btn-primary {
+
+
+        margin-bottom: 5px;
+}
+.btn-sm {
+
+        display: inline-block;
+}
+
+caption {
+
+        float: left;
+        clear: both;
+
+}
+
+.image{
+        display: block;
+        border-radius: 10px;
+        padding-left: 32em;
+        
+      }
+.logo{
+    padding: 2em 0em 1em 52em;
+}
+.dimensions{
+width: 875px;
+ height: 458px;   
+}
+

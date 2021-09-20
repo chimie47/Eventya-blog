@@ -1,0 +1,15 @@
+.navinline{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  align-items: center;
+}
+
+.centru
+{
+  display: inline-block;  
+  padding: 8px;
+  background-color: #dddddd;
+  text-decoration: none;
+}

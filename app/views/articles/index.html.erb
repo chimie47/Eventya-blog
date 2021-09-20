@@ -1,0 +1,30 @@
+<%= link_to root_path do %>
+  <%= image_tag "logo.png" , class: "logo" %>
+<% end %>
+
+<% @articles.each do |article| %>
+  <div class="image">
+  <%= link_to article do %>
+    <%= image_tag article.avatar , class: "dimensions" %>
+  <% end %>
+  </div>
+  <div class="d-flex p-2 aligns-items-center justify-content-center">
+    <div class="card" style="width: 40rem;">
+      <div class="card-body">
+        <p class="card-text"><%= article.title %></p>
+      </div>
+        
+        <%= article.description %>
+        <%= article.category %>
+        <%= link_to 'Edit', edit_article_path(article) %>
+        <%= link_to 'Delete article', article_path(article), method: :delete, data: { confirm: 'Are u sure?' } %>
+    </div>
+  </div>
+<% end %>
+  <%= paginate @articles , window: 2 %>
+
+
+ 
+ 
+
+
